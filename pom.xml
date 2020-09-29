@@ -58,9 +58,14 @@
           <artifactId>maven-surefire-plugin</artifactId>
           <version>3.0.0-M5</version>
           <configuration>
-            <suiteXmlFiles>
+          <systemPropertyVariables>
+            <BrowserOfChoice>Chrome</BrowserOfChoice>
+            <BuildDirectory>${project.build.directory}</BuildDirectory>
+          </systemPropertyVariables>
+            <!-- <suiteXmlFiles>
                <suiteXmlFile>testng.xml</suiteXmlFile>
-            </suiteXmlFiles>
+            </suiteXmlFiles> -->
+            <groups>version3</groups>
           </configuration>
         </plugin>
         <plugin>
